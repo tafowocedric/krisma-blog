@@ -1,0 +1,284 @@
+
+#body-wrapper
+    width: 100%
+    padding-bottom: toRem(30px)
+    margin-bottom: toRem(70px)
+
+    .blog-container
+        width: $window-size
+        margin: 0 auto
+        margin-top: toRem(30px)
+        padding-top: toRem(50px)
+        position: relative
+        flex-direction: column
+
+        @import "blog-preview"
+
+        article.blog
+            width: 100%
+
+            .blog-carousel-container
+                width: 100%
+                height: toRem(360px)
+                overflow: hidden
+                position: relative
+                border-radius: $polygon-border
+
+            .carousel
+                width: 100%
+                height: 100%
+                position: relative
+
+                &::before
+                    content: ""
+                    display: block
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: linear-gradient(120deg, #2d3748 0%, transparent 120%)
+
+                .carousel-img-wrapper
+                    width: 100%
+                    height: 100%
+
+                    .img-container
+                        width: inherit
+                        height: inherit
+
+                    .carousel-caption-container
+                        position: absolute
+                        top: 0
+                        left: toRem(10px)
+                        width: inherit
+                        height: inherit
+                        padding: toRem(64px) toRem(32px) toRem(16px) toRem(128px)
+
+                        article
+                            .caption-wrapper
+                                flex-direction: column
+                                justify-content: flex-start
+                                height: 100%
+                                width: 100%
+                                margin-bottom: toRem(38px)
+
+                                a#markdown
+                                    font-weight: bold
+                                    color: $white
+                                    margin-bottom: 1rem
+                                    font-size: toRem(25.34px)
+                                    width: 100%
+                                    display: block
+
+                                .markdown-detail
+                                    margin-bottom: toRem(16px)
+                                    p
+                                        width: 80%
+                                        color: #c5d0df
+                                        font-size: 1rem
+                                        text-shadow: 1px 1px 0px #2d3748
+                                        font-size: toRem(17.34px)
+                                        line-height: 1.66
+                                        user-select: none
+
+                                .markdown-author
+                                    padding-right: 0.5rem
+
+                                    p
+                                        color: $white
+                                        font-size: toRem(16.34px)
+                                        font-weight: 600
+                                        letter-spacing: 0.95px
+                                        text-transform: capitalize
+                                        user-select: none
+
+                                        display: inline-block
+
+                                        &:hover
+                                            color: $input-color-hover
+                                            cursor: pointer
+
+                        .carousel-nav
+                            button
+                                padding: toRem(10px)
+                                border: none
+                                background-color: $white
+                                border-radius: $circle-border
+                                outline: none
+                                cursor: pointer
+
+                                &:hover
+                                    background-color: $input-color-hover
+                                    path
+                                        fill: $white
+
+                                &:first-child
+                                    margin-right: toRem(15px)
+
+                                path
+                                    fill: $input-color
+
+                        .stick-dot
+                            position: absolute
+                            left: toRem(100px)
+                            top: toRem(69px)
+
+                            .dots
+                                position: relative
+                                width: 10px
+                                height: 10px
+                                background-color: $input-color-hover
+                                border-radius: $circle-border
+
+                                &::before, &::after
+                                    content: ""
+                                    position: absolute
+                                    width: 10px
+                                    height: 10px
+                                    background-color: lighten($input-color, 30%)
+                                    border-radius: $circle-border
+                                    top: 20px
+
+                                &::after
+                                    top: 40px
+                                    background-color: $input-color-hover
+
+        article.rhapsody-blog
+            width: 100%
+            max-width: toRem(300px)
+            margin-left: toRem(20px)
+            background-color: #EDF2F7
+            padding: toRem(30px)
+            height: fit-content
+            position: relative
+            border-radius: $polygon-border
+            box-shadow: $box-shadow
+
+            .rhapsody-header
+                margin-bottom: toRem(17px)
+                line-height: 1.43
+                letter-spacing: toRem(0.65px)
+
+                h3.title
+                    text-align: center
+                    display: block
+                    font-weight: bold
+                    margin-bottom: 0.45rem
+                    font-size: toRem(18px)
+                    color: #718096
+                    text-decoration: underline
+
+                h4.theme-verse
+                    div
+                        margin-bottom: toRem(5px)
+
+            .rhapsody-content
+                margin-bottom: toRem(20px)
+
+                p
+                    line-height: 1.56
+                    letter-spacing: toRem(0.34px)
+                    margin-bottom: toRem(13px)
+
+                    &:first-child
+                        &::first-letter
+                            font-weight: 600
+                            font-size: toRem(19px)
+
+            .rhapsody-footer
+                @extend .rhapsody-header
+                line-height: 1.23
+                margin-bottom: 0
+
+                h4
+                    margin-bottom: toRem(16px)
+
+        .blog-subscriber
+            margin-top: 8rem
+            width: 100%
+            background-color: $white
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            padding: toRem(40px) 0
+            border-radius: $polygon-border
+            box-shadow: $box-shadow
+            text-align: center
+            position: relative
+
+            .blog-subscriber-container
+                display: block
+                line-height: 1.65
+                width: 50%
+                margin: 0 auto
+                text-align: center
+
+                h3.subscriber-title
+                    margin-bottom: 1rem
+                    font-size: 1.5rem
+                    color: #2d3748
+                    font-weight: 600
+                    letter-spacing: toRem(1px)
+
+                p.subscriber-content
+                    color: darken($gray-white, 10%)
+                    margin-bottom: toRem(15px)
+                    padding-bottom: toRem(20px)
+                    font-size: toRem(18px)
+
+                @import "form-control"
+                .form-control
+                    width: 50%
+                    margin: 0 auto
+                    flex-direction: column
+
+                    input
+                        border-radius: 6px
+                        margin-bottom: toRem(17px)
+
+                    button
+                        display: inline-block
+                        width: fit-content
+                        text-align: center
+                        line-height: inherit
+                        appearance: none
+                        padding: 0.7rem 2.5rem
+                        border: none
+                        outline: none
+                        border-radius: toRem(50px)
+                        font-size: toRem(16px)
+                        color: $white
+                        background-color: $input-color-hover
+                        text-transform: capitalize
+                        align-self: center
+                        cursor: pointer
+
+                        &:hover
+                            background-color: $primary-text-color
+
+            .subscriber-svg-container
+                position: absolute
+                top: toRem(-35px)
+                left: 10%
+
+                .svg-container
+                    position: relative
+                    .svg
+                        svg
+                            fill: lighten($gray-white, 20%)
+                            font-size: 9rem
+
+                    .envelope-svg
+                        svg
+                            fill: lighten(#9f7aea, 3%)
+
+                    .smoke-svg
+                        position: absolute
+                        left: toRem(-60px)
+
+                        svg
+                            transform: rotate(130deg)
+                            font-size: 7rem
+
+        @import "article-preview"

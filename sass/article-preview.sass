@@ -1,0 +1,77 @@
+.article-preview
+    width: 100%
+
+    .grid
+        grid-template-columns: toRem(360px) auto toRem(360px)
+
+        & > .blog-preview
+            border: none
+            padding: toRem(10px)
+            border-radius: $polygon-border
+            flex-direction: column
+            height: 100%
+
+            .img-container
+                width: 100%
+                height: toRem(250px)
+                margin: 0 0 toRem(20px)
+
+                img
+                    object-fit: cover
+                    border-radius: $polygon-border
+
+            article.blog-content-preview
+                width: 90%
+                margin: 0 auto
+                padding-top: toRem(10px)
+                line-height: 1.26
+                letter-spacing: toRem(0.89px)
+                display: flex
+                flex-direction: column
+                height: 100%
+
+                a.blog-title
+                    font-size: toRem(24px)
+                    margin-bottom: toRem(27px)
+
+                p
+                    color: darken($gray-white, 10%)
+                    font-size: toRem(16px)
+                    font-weight: 400
+
+                .author-profile
+                    align-items: center
+                    margin-top: auto
+                    padding-bottom: toRem(16px)
+
+                    img
+                        width: 60px
+                        height: 60px
+                        border-radius: $circle-border
+                        margin-right: toRem(16px)
+
+                    .profile
+                        color: $gray-white
+
+                        a
+                            background: none
+                            color: darken($gray-white, 10%)
+                            margin: 0
+                            padding-left: 0
+                            padding-right: 0
+                            font-weight: 600
+
+                            &:hover
+                                color: lighten($input-color-hover, 5%)
+
+                        p
+                            margin: 0
+
+    .blog-perview-middle-container.flex
+        flex-direction: column
+        width: 100%
+
+        .blog-preview
+            width: 100%
+            margin: 0
+            margin-bottom: toRem(20px)

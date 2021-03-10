@@ -1,0 +1,65 @@
+
+.blog-preview-container
+    width: 100%
+    margin-top: toRem(64px)
+
+    .blog-preview-wrapper
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        grid-gap: toRem(20px)
+
+        .blog-preview
+            background-color: $white
+            border-radius: $polygon-border
+            height: toRem(190px)
+            overflow: hidden
+            border-left: 5px solid lighten($input-color-hover, 10%)
+            padding: toRem(10px)
+            align-items: center
+
+            &:hover
+                webkit-transform: translateY(-0.25rem)
+                -ms-transform: translateY(-0.25rem)
+                transform: translateY(-0.25rem)
+                box-shadow: 0px 2px 4px rgb(46 41 51 / 8%), 0px 5px 10px rgb(71 63 79 / 16%)
+
+            .img-container
+                width: toRem(200px)
+                height: 100%
+                border-radius: $polygon-border
+                margin-right: toRem(16px)
+
+            article.blog-content-preview
+                width: fit-content
+
+                a
+                    display: inline-block
+                    line-height: 1.33
+                    margin-bottom: 0.5rem
+
+                a.author
+                    padding: toRem(6px) toRem(15px)
+                    border-radius: $polygon-border
+                    border: none
+                    background-color: lighten($input-color-hover, 10%)
+                    color: lighten($input-color, 40%)
+                    margin-bottom: toRem(15px)
+
+                    &:hover
+                        color: $primary-text-color
+
+                a.blog-title
+                    font-size: toRem(26px)
+                    color: #2d3748
+                    font-weight: bold
+                    font-size: toRem(20px)
+                    width: 90%
+
+                p.publish-date
+                    align-self: flex-end
+                    color: $gray-white
+                    font-size: toRem(15px)
+                    margin-top: toRem(10px)
+                    user-select: none
+
+    @import "view-more"

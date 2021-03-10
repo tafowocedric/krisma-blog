@@ -1,0 +1,66 @@
+
+#header
+    width: 100%
+    background-color: $white
+
+    .header-wrapper
+        justify-content: space-between
+        align-items: center
+        height: toRem(110px)
+        overflow: hidden
+        width: $window-size
+        margin: 0 auto
+
+        a.logo-container
+            max-width: toRem(140px)
+            height: toRem(40px)
+            align-items: baseline
+
+            img
+                object-fit: contain
+
+            p
+                font-size: toRem(30px)
+                font-weight: 900
+                color: #F94340
+                font-family: $akaya-font
+
+        .search-container
+            background-color: $input-bg-color
+            border-radius: 0.3rem
+            transform: translate(0,0)
+            max-width: toRem(330px)
+            width: 100%
+            border: 3px solid $input-bg-color
+            padding: 0 1.5rem
+            position: relative
+
+            @import "form-control"
+
+            .search-icon
+                position: absolute
+                top: 50%
+                transform: translateY(-44%)
+                left: -0.9rem
+
+            path
+                fill: $input-color
+
+        .nav-container
+            a
+                font-family: $akaya-font
+                display: inline-block
+                font-weight: 700
+                color: $input-color
+                font-size: toRem(17px)
+                text-transform: uppercase
+                user-select: none
+                padding: 0.25rem
+                margin: 0
+                margin-left: 0.5rem
+                margin-right: 0.5rem
+                line-height: 1.5
+                letter-spacing: toRem(0.81px)
+
+                &:hover
+                    color: $input-color-hover

@@ -1,0 +1,37 @@
+@import "fonts_variables", "functions", "variables"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: $primary-text-color
+    transition: $transition
+
+body
+    font-family: $ansonregular-font
+    width: 100%
+    height: 100%
+    background-color: $primary-bg-color
+
+    @import "header"
+    @import "body"
+    @import "footer"
+
+.flex
+    // -webkit-display: flex
+    display: flex
+
+.grid
+    display: grid
+
+a
+    -webkit-text-decoration: none
+    text-decoration: none
+
+img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+li
+    list-style-type: none
