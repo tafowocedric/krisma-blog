@@ -81,16 +81,18 @@
 
                                         <!-- carousel buttons -->
                                         <div class="carousel-nav flex">
-                                            <button class="carousel-nav nav-left" data-role="none">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="carousel-nav nav-right" data-role="none">
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
-                                                </svg>
-                                            </button>
+                                            <div class="carousel-nav-wrapper flex">
+                                                <button class="carousel-nav nav-left" data-role="none">
+                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+                                                    </svg>
+                                                </button>
+                                                <button class="carousel-nav nav-right" data-role="none">
+                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
                                         </div>
 
                                         <!-- sticky-dots -->
@@ -163,15 +165,19 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </article>
 
                     <article class="rhapsody-blog">
                         <div class="rhapsody-container">
                             <div class="rhapsody-header">
                                 <h3 class="title">
-                                    <q>Lorem, ipsum dolor. ipsum dolor.</q>
+                                    <sup>
+                                        <img src="/images/left-quote.png" alt="quote">
+                                    </sup>
+                                    Lorem, ipsum dolor. ipsum dolor.
+                                    <sup>
+                                        <img src="/images/left-quote.png" alt="quote">
+                                    </sup>
                                 </h3>
                                 <h4 class="theme-verse">
                                     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, corporis.</div>
@@ -287,6 +293,109 @@
                                 </article>
                             </div>
 
+                        </div>
+                    </div>
+                </section>
+
+                <section class="motivation article-preview">
+                    <div class="blog-preview-container">
+                        <div class="see-more-container flex">
+                            <p>motivations</p>
+                            <a href="#">view more</a>
+                        </div>
+
+                        <div class="blog-preview-wrapper grid">
+                            <div class="blog-preview flex">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="images/image.webp" alt="">
+                                    </a>
+                                </div>
+                                <article class="blog-content-preview">
+                                    <a href="#" class="blog-title">Lorem, ipsum dolor, Lorem ipsum dolor sit amet.</a>
+                                    <p href="#" class="blog-content">Lorem ipsum dolor sit amet lorem ipsum dolor sit lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ipsa? ...</p>
+                                    <div class="author-profile flex">
+                                        <img src="images/john-doe.webp" alt="">
+                                        <div class="profile">
+                                            <a href="#" class="author">Lorem, ipsum dolor</a>
+                                            <p class="publish-date">April 02, 2021</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="blog-preview flex">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="images/image.webp" alt="">
+                                    </a>
+                                </div>
+                                <article class="blog-content-preview">
+                                    <a href="#" class="blog-title">Lorem, ipsum dolor, Lorem ipsum dolor sit amet.</a>
+                                    <p href="#" class="blog-content">Lorem ipsum dolor sit amet lorem ipsum dolor sit lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ipsa? ...</p>
+                                    <div class="author-profile flex">
+                                        <img src="images/john-doe.webp" alt="">
+                                        <div class="profile">
+                                            <a href="#" class="author">Lorem, ipsum dolor</a>
+                                            <p class="publish-date">April 02, 2021</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="blog-preview flex">
+                                <div class="img-container">
+                                    <a href="#">
+                                        <img src="images/image (5).webp" alt="">
+                                    </a>
+                                </div>
+                                <article class="blog-content-preview">
+                                    <a href="#" class="blog-title">Lorem, ipsum dolor</a>
+                                    <p href="#" class="blog-content">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</p>
+                                    <div class="author-profile flex">
+                                        <img src="images/steve-grant.webp" alt="">
+                                        <div class="profile">
+                                            <a href="#" class="author">Lorem, ipsum dolor</a>
+                                            <p class="publish-date">April 02, 2021</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="blog-preview-wrapper flex">
+                            <div class="blog-preview flex">
+                                <article class="blog-content-preview">
+                                    <a href="#" class="sub-title">Motivation</a>
+                                    <a href="#" class="blog-title">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit</a>
+                                    <div class="author-block flex">
+                                        <a href="#" class="author">Lorem, ipsum dolor</a>
+                                        <p class="publish-date">April 02, 2021</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="blog-preview flex">
+                                <article class="blog-content-preview">
+                                    <a href="#" class="sub-title">Motivation</a>
+                                    <a href="#" class="blog-title">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit</a>
+                                    <div class="author-block flex">
+                                        <a href="#" class="author">Lorem, ipsum dolor</a>
+                                        <p class="publish-date">April 02, 2021</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="blog-preview flex">
+                                <article class="blog-content-preview">
+                                    <a href="#" class="sub-title">Innovation</a>
+                                    <a href="#" class="blog-title">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit</a>
+                                    <div class="author-block flex">
+                                        <a href="#" class="author">Lorem, ipsum dolor</a>
+                                        <p class="publish-date">April 02, 2021</p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </section>

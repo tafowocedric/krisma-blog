@@ -1,0 +1,218 @@
+
+#body-wrapper
+    width: 100%
+    padding-bottom: toRem(30px)
+    margin-bottom: toRem(70px)
+    width: $window-size
+    margin: 0 auto
+
+    .blog-container
+        margin-top: toRem(30px)
+        padding-top: toRem(50px)
+        position: relative
+        flex-direction: column
+
+        @import "blog-preview"
+
+        article.blog
+            width: 100%
+
+            .blog-carousel-container
+                width: 100%
+                height: toRem(400px)
+                overflow: hidden
+                position: relative
+                border-radius: $polygon-border
+
+                @import "carousel"
+
+        article.rhapsody-blog
+            width: 100%
+            max-width: toRem(300px)
+            margin-left: toRem(20px)
+            background-color: #EDF2F7
+            padding: toRem(30px)
+            height: fit-content
+            position: relative
+            border-radius: $polygon-border
+            box-shadow: $box-shadow
+
+            .rhapsody-header
+                margin-bottom: toRem(17px)
+                line-height: 1.43
+                letter-spacing: toRem(0.65px)
+
+                h3.title
+                    text-align: center
+                    display: block
+                    font-weight: bold
+                    margin-bottom: 0.95rem
+                    line-height: 1.24
+                    font-size: toRem(20px)
+                    color: #718096
+
+                    sup
+                        width: toRem(12px)
+                        height: auto
+                        display: inline-block
+                        transform: rotateX(180deg)
+
+                        &:last-child
+                            transform: rotate(180deg)
+
+                h4.theme-verse
+                    div
+                        margin-bottom: toRem(5px)
+
+                    .scripture
+                        color: #718096
+
+            .rhapsody-content
+                margin-bottom: toRem(20px)
+
+                p
+                    line-height: 1.56
+                    letter-spacing: toRem(0.34px)
+                    margin-bottom: toRem(13px)
+
+                    &:first-child
+                        &::first-letter
+                            font-weight: 600
+                            font-size: toRem(19px)
+
+            .rhapsody-footer
+                @extend .rhapsody-header
+                line-height: 1.23
+                margin-bottom: 0
+
+                h4
+                    margin-bottom: toRem(16px)
+
+        .blog-subscriber
+            margin-top: 8rem
+            width: 100%
+            background-color: $white
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            padding: toRem(40px) 0
+            border-radius: $polygon-border
+            box-shadow: $box-shadow
+            text-align: center
+            position: relative
+
+            .blog-subscriber-container
+                display: block
+                line-height: 1.65
+                width: 50%
+                margin: 0 auto
+                text-align: center
+
+                h3.subscriber-title
+                    margin-bottom: 1rem
+                    font-size: 1.5rem
+                    color: #2d3748
+                    font-weight: 600
+                    letter-spacing: toRem(1px)
+
+                p.subscriber-content
+                    color: darken($gray-white, 10%)
+                    margin-bottom: toRem(15px)
+                    padding-bottom: toRem(20px)
+                    font-size: toRem(18px)
+
+                @import "../utils/form-control"
+                .form-control
+                    width: 50%
+                    margin: 0 auto
+                    flex-direction: column
+
+                    input
+                        border-radius: 6px
+                        margin-bottom: toRem(17px)
+
+                    button
+                        display: inline-block
+                        width: fit-content
+                        text-align: center
+                        line-height: inherit
+                        appearance: none
+                        padding: 0.7rem 2.5rem
+                        border: none
+                        outline: none
+                        border-radius: toRem(50px)
+                        font-size: toRem(16px)
+                        color: $white
+                        background-color: $input-color-hover
+                        text-transform: capitalize
+                        align-self: center
+                        cursor: pointer
+
+                        &:hover
+                            background-color: $primary-text-color
+
+            .subscriber-svg-container
+                position: absolute
+                top: toRem(-35px)
+                left: 10%
+
+                .svg-container
+                    position: relative
+                    .svg
+                        svg
+                            fill: lighten($gray-white, 20%)
+                            font-size: 9rem
+
+                    .envelope-svg
+                        svg
+                            fill: lighten(#9f7aea, 3%)
+
+                    .smoke-svg
+                        position: absolute
+                        left: toRem(-60px)
+
+                        svg
+                            transform: rotate(130deg)
+                            font-size: 7rem
+
+        @import "article-preview"
+
+        .motivation
+            .grid
+                grid-template-columns: repeat(3, 1fr)
+
+            .flex
+                margin-top: toRem(20px)
+
+            .blog-preview-wrapper
+                &:last-child
+                    .blog-preview
+                        padding: toRem(20px)
+                        box-sizing: content-box
+                        height: auto
+                        align-items: flex-start
+                        border-color: #e9d8fd
+
+                        .sub-title
+                            display: inline-block
+                            padding: toRem(6px) toRem(20px)
+                            margin: 0 0 toRem(16px)
+                            background-color: #e9d8fd
+                            border-radius: $polygon-border
+
+                            &:hover
+                                background-color: #718096
+
+                        .author-block
+                            width: 100%
+                            justify-content: space-between
+                            margin: 0
+
+                            .author, .publish-date
+                                padding: 0
+                                margin: 0
+                                background: none
+
+                            .author
+                                font-weight: 600
+                                color: #7c8593c9

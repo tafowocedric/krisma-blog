@@ -1,4 +1,4 @@
-@import "fonts_variables", "functions", "variables"
+@import "./utils/fonts_variables", "./utils/functions", "./utils/variables"
 
 *
     margin: 0
@@ -13,9 +13,14 @@ body
     height: 100%
     background-color: $primary-bg-color
 
-    @import "header"
-    @import "body"
-    @import "footer"
+    & > section
+        display: flex
+        flex-direction: column
+        height: 100vh
+
+    @import "./index/header"
+    @import "./index/body"
+    @import "./index/footer"
 
 .flex
     // -webkit-display: flex

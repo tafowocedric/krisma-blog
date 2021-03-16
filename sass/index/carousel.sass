@@ -1,0 +1,135 @@
+
+.carousel
+    width: 100%
+    height: 100%
+    position: relative
+
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(120deg, #2d3748 0%, transparent 120%)
+
+    .carousel-img-wrapper
+        width: 100%
+        height: 100%
+
+        .img-container
+            width: inherit
+            height: inherit
+
+        .carousel-caption-container
+            position: absolute
+            top: 0
+            left: toRem(10px)
+            width: inherit
+            height: inherit
+            padding: toRem(64px) toRem(32px) toRem(16px) toRem(128px)
+
+            article
+                margin-bottom: toRem(38px)
+
+                .caption-wrapper
+                    flex-direction: column
+                    justify-content: flex-start
+                    height: 100%
+                    width: 100%
+
+                    a#markdown
+                        font-weight: bold
+                        color: $white
+                        margin-bottom: 1rem
+                        font-size: toRem(25.34px)
+                        width: 100%
+                        display: block
+
+                    .markdown-detail
+                        margin-bottom: toRem(16px)
+                        p
+                            width: 80%
+                            color: #c5d0df
+                            font-size: 1rem
+                            text-shadow: 1px 1px 0px #2d3748
+                            font-size: toRem(17.34px)
+                            line-height: 1.66
+                            user-select: none
+
+                    .markdown-author
+                        padding-right: 0.5rem
+
+                        p
+                            color: $white
+                            font-size: toRem(16.34px)
+                            font-weight: 600
+                            letter-spacing: 0.95px
+                            text-transform: capitalize
+                            user-select: none
+
+                            display: inline-block
+
+                            &:hover
+                                color: $input-color-hover
+                                cursor: pointer
+
+            .carousel-nav
+                margin-top: toRem(20px)
+
+                .carousel-nav-wrapper
+                    button
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: center
+                        padding: toRem(10px)
+                        border: none
+                        background-color: $white
+                        border-radius: $circle-border
+                        outline: none
+                        cursor: pointer
+
+                        &:hover
+                            background-color: $input-color-hover
+                            path
+                                fill: $white
+
+                        &:first-child
+                            margin-right: toRem(25px)
+
+                        svg
+                            font-size: toRem(17px)
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            justify-content: center
+
+                            path
+                                fill: $input-color
+
+            .stick-dot
+                position: absolute
+                left: toRem(100px)
+                top: toRem(69px)
+
+                .dots
+                    position: relative
+                    width: 10px
+                    height: 10px
+                    background-color: $input-color-hover
+                    border-radius: $circle-border
+
+                    &::before, &::after
+                        content: ""
+                        position: absolute
+                        width: 10px
+                        height: 10px
+                        background-color: lighten($input-color, 30%)
+                        border-radius: $circle-border
+                        top: 20px
+
+                    &::after
+                        top: 40px
+                        background-color: $input-color-hover
