@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oi&display=swap");
+@font-face {
+  font-family: "ansonregular";
+  src: url("../../fonts/anson-regular-webfont.eot");
+  src: url("../../fonts/anson-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/anson-regular-webfont.woff") format("woff"), url("../../fonts/anson-regular-webfont.ttf") format("truetype"), url("../../fonts/anson-regular-webfont.svg#ansonregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2C3748;
+  transition: transform 250ms ease, box-shadow 250ms ease, color 250ms ease;
+}
+
+body {
+  font-family: "ansonregular";
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+body > section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+body #body-wrapper {
+  width: 100%;
+  padding-bottom: 1.875rem;
+  margin-bottom: 4.375rem;
+  width: 65%;
+  margin: 0 auto;
+}
+body #header {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+body #header .header-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  height: 6.875rem;
+  overflow: hidden;
+  width: 65%;
+  margin: 0 auto;
+}
+body #header .header-wrapper a.logo-container {
+  max-width: 8.75rem;
+  height: 2.5rem;
+  align-items: baseline;
+}
+body #header .header-wrapper a.logo-container img {
+  object-fit: contain;
+}
+body #header .header-wrapper a.logo-container p {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: #F94340;
+  font-family: "Akaya Telivigala", cursive;
+}
+body #header .header-wrapper .search-container {
+  background-color: #E2E8F0;
+  border-radius: 0.3rem;
+  transform: translate(0, 0);
+  max-width: 20.625rem;
+  width: 100%;
+  border: 3px solid #E2E8F0;
+  padding: 0 1.5rem;
+  position: relative;
+}
+body #header .header-wrapper .search-container .form-control {
+  width: 100%;
+  position: relative;
+  flex-wrap: nowrap;
+}
+body #header .header-wrapper .search-container .form-control input {
+  width: 100%;
+  display: block;
+  padding: 0.7rem 0.5rem;
+  cursor: text;
+  color: #808da1;
+  background-color: #E2E8F0;
+  outline: none;
+  margin-left: 0.25rem;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+}
+body #header .header-wrapper .search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-44%);
+  left: -0.9rem;
+}
+body #header .header-wrapper .search-container path {
+  fill: #718096;
+}
+body #header .header-wrapper .nav-container a {
+  font-family: "Akaya Telivigala", cursive;
+  display: inline-block;
+  font-weight: 700;
+  color: #718096;
+  font-size: 1.0625rem;
+  text-transform: uppercase;
+  user-select: none;
+  padding: 0.25rem;
+  margin: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.050625rem;
+}
+body #header .header-wrapper .nav-container a:hover {
+  color: #667EEA;
+}
+body footer.blog-footer {
+  width: 100%;
+  height: fit-content;
+  background-color: #FFFFFF;
+  margin-top: auto;
+}
+body footer.blog-footer .footer-wrapper {
+  width: 65%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body footer.blog-footer .footer-wrapper .copy-right .logo-container {
+  max-width: 8.75rem;
+  height: 2.5rem;
+  align-items: baseline;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+body footer.blog-footer .footer-wrapper .copy-right .logo-container img {
+  object-fit: contain;
+}
+body footer.blog-footer .footer-wrapper .copy-right .logo-container p {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: #F94340;
+  font-family: "Akaya Telivigala", cursive;
+}
+body footer.blog-footer .footer-wrapper .copy-right p {
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  align-items: center;
+  color: #4f6178;
+}
+body footer.blog-footer .footer-wrapper .copy-right p em {
+  font-style: normal;
+  font-size: 1.5625rem;
+  color: inherit;
+  margin-right: 0.125rem;
+  line-height: 0.5;
+  align-self: flex-end;
+}
+body footer.blog-footer .footer-wrapper .footer-nav {
+  letter-spacing: 0.46px;
+  text-transform: capitalize;
+}
+body footer.blog-footer .footer-wrapper .footer-nav h3.title {
+  display: block;
+  line-height: 1.33;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+body footer.blog-footer .footer-wrapper .footer-nav li a {
+  color: #718096;
+  display: inline-block;
+  margin: 0 0.7rem 1rem;
+  font-size: 1.0625rem;
+  user-select: none;
+  transition: 0.12s;
+}
+body footer.blog-footer .footer-wrapper .footer-nav li a:hover {
+  color: #667EEA;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=blogs.css.map */

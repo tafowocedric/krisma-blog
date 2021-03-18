@@ -108,7 +108,7 @@
                         <div class="blog-preview-container">
                             <div class="see-more-container flex">
                                 <p>blog preview</p>
-                                <a href="#">view more</a>
+                                <a href="/blogs">view more</a>
                             </div>
 
                             <div class="blog-preview-wrapper grid">
@@ -172,11 +172,15 @@
                             <div class="rhapsody-header">
                                 <h3 class="title">
                                     <sup>
-                                        <img src="/images/left-quote.png" alt="quote">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                                        </svg>
                                     </sup>
                                     Lorem, ipsum dolor. ipsum dolor.
                                     <sup>
-                                        <img src="/images/left-quote.png" alt="quote">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                                        </svg>
                                     </sup>
                                 </h3>
                                 <h4 class="theme-verse">
@@ -388,7 +392,7 @@
 
                             <div class="blog-preview flex">
                                 <article class="blog-content-preview">
-                                    <a href="#" class="sub-title">Innovation</a>
+                                    <a href="#" class="sub-title">Motivation</a>
                                     <a href="#" class="blog-title">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit</a>
                                     <div class="author-block flex">
                                         <a href="#" class="author">Lorem, ipsum dolor</a>
@@ -406,7 +410,7 @@
                         <p class="subscriber-content">We'll send you the best of our blog just once a month. We promise.</p>
 
                         <div class="form-control flex">
-                            <input placeholder="Email Address" type="text" name="subscriber" id="text-field" />
+                            <input placeholder="Email Address" autocomplete="email" type="text" name="subscriber" id="text-field" />
                             <button type="submit">subscribe</button>
                         </div>
                     </div>
@@ -433,17 +437,17 @@
         <footer class="blog-footer" id="footer">
             <div class="footer-wrapper flex">
                 <div class="copy-right">
-                    <div class="logo-container flex">
+                    <a href="/" class="logo-container flex">
                         <img src="images/logo.png" alt="logo">
                         <p>KRISMA</p>
-                    </div>
+                    </a>
                     <p class="flex"><em>&copy;</em> 2021, All rights reserved.</p>
                 </div>
 
                 <div class="footer-nav quick-links">
                     <h3 class="title">Quick links</h3>
                     <ul class="link-container">
-                        <li><a href="#">blogs</a></li>
+                        <li><a href="/blogs">blogs</a></li>
                         <li><a href="#">about us</a></li>
                         <li><a href="#">contact us</a></li>
                     </ul>
@@ -471,6 +475,26 @@
             </div>
         </footer>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("a").click(function (event) {
+                if (event.target.href === "http://127.0.0.1:5500/blogs") {
+                    $(document).prop('title', 'Blogs');
+                    $('link[href*=""]').attr('href', 'style/index.css');
+
+                    $("#body-wrapper").load("blogs.html");
+                } else if (event.target.href === "http://127.0.0.1:5500/") {
+                    console.log("object")
+                    location.reload();
+                }
+
+                event.preventDefault();
+            });
+        });
+    </script>
+
 </body>
 
 </html>

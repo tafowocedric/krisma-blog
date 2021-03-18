@@ -9,7 +9,7 @@
             padding: toRem(10px)
             border-radius: $polygon-border
             flex-direction: column
-            height: 100%
+            height: auto
 
             .img-container
                 width: 100%
@@ -31,12 +31,15 @@
                 height: 100%
 
                 a.blog-title
-                    font-size: toRem(24px)
+                    font-size: toRem(19px)
                     margin-bottom: toRem(27px)
+                    line-height: 1.54
+                    font-family: $akaya-font
 
                 p
                     color: darken($gray-white, 10%)
                     font-size: toRem(16px)
+                    font-family: $ansonregular-font
                     font-weight: 400
                     margin-bottom: toRem(18px)
 
@@ -79,3 +82,7 @@
 
             &:last-child
                 margin: 0
+
+            .blog-content-preview
+                p.publish-date
+                    font-size: toRem(13px)
